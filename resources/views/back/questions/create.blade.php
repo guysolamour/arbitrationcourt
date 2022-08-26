@@ -1,0 +1,41 @@
+@extends(back_view_path('layouts.base'))
+
+
+
+@section('title','Ajout questions')
+
+
+@section('content')
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="row align-items-end">
+                <div class="col-lg-8">
+                </div>
+                <div class="col-lg-4">
+                   {{-- breadcrumb --}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3 class="card-title">Ajout</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @include('back.questions._form')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endsection
