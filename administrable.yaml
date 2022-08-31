@@ -16,12 +16,28 @@ globals:
 
 # Models definitions
 models:
-  Question:
+  Request:
+    imagemanager: {  images: "documents justificatifs" }
     fields:
-      - title: { required: true }
+      - title: { required: true, breadcrumb: true }
       - uuid: { rules: req, constraints: unique }
-      - answer: { name: answer, type: text, nullable: true, tinymce: true }
-      - online: { type: boolean, trans: en ligne, default: true }
+      - content: { name: content, type: text, nullable: true }
+      - defender: { name: defender, type: text, nullable: true }
+      - amount: { name: amount, type: string, nullable: true }
+      - online: { type: boolean, trans: en ligne, default: false }
+      - applicant_id: { type: { relation: one to many, type: simple, related: App\Models\User, property: name }, nullable: true }
+      - defender_id: { type: { relation: one to many, type: simple, related: App\Models\User, property: name }, nullable: true }
+
+  Refere:
+    trans: Arbitres
+    imagemanager: {  front: "Photo" }
+    fields:
+      - name: { required: true, breadcrumb: true }
+      - uuid: { rules: req, constraints: unique }
+      - email: {  type: string, nullable: true }
+      - phone_number: {  type: string, nullable: true }
+      - job: { type: string, nullable: true }
+      - about: {  type: text, nullable: true, trans: "A propos" }
 
   Note:
     imagemanager: { front: front image labe1l, back: back image label, images: images label }

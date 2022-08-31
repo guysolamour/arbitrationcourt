@@ -164,6 +164,20 @@
             </div>
 
             {{-- add megamenu Link here --}}
+    <!-- refere link -->
+    <div class="app-item">
+        <a href="{{ route('back.refere.index') }}">
+            <i class="fa fa-folder"></i><span>Referes</span>
+        </a>
+    </div>
+    <!-- end refere link -->
+    <!-- request link -->
+    <div class="app-item">
+        <a href="{{ route('back.request.index') }}">
+            <i class="fa fa-folder"></i><span>Requests</span>
+        </a>
+    </div>
+    <!-- end request link -->
     <!-- question link -->
     <div class="app-item">
         <a href="{{ route('back.question.index') }}">

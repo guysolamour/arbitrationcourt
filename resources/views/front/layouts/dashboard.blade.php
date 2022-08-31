@@ -60,7 +60,6 @@
         <![endif]-->
     <script src="{{ asset('vendor/sleek/assets/plugins/nprogress/nprogress.js') }}"></script>
     @stack('css')
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
@@ -121,7 +120,7 @@
 
         {{-- <script src="{{ asset('js/vendor/fontawesome.js') }}"></script> --}}
         @stack('js')
-        {{-- @include('flashy::message') --}}
+        @flashy()
 
         @include('cookie-consent::index')
 

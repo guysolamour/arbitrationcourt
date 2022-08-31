@@ -14,33 +14,64 @@
 
     @yield('seo')
 
-
-    {{-- Bootstrap --}}
-    <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap.min.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/vendor/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/vendor/sweetalert.css') }}">
 
-    {{-- Flashy --}}
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet'>
 
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('vendor/template/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('vendor/template/assets/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v2.2.1
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+
+
     @stack('css')
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-
-<main id="app">
     @include(front_view_path('partials._header'))
-    @yield('content')
+
+    @yield('hero')
+
+    <main id="app">
+        @yield('content')
+    </main>
     @include(front_view_path('partials._footer'))
-</main>
 
 
+    <!-- Vendor JS Files -->
+  <script src="{{ asset('vendor/template/assets/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('vendor/template/assets/vendor/aos/aos.js') }}"></script>
 
-<script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
-<script src="{{ asset('js/vendor/popper.min.js') }}"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ asset('vendor/template/assets/js/main.js') }}"></script>
 
-<script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/vendor/sweetalert.min.js') }}"></script>
 
 <script src="{{ asset('js/vendor/helpers.js') }}"></script>

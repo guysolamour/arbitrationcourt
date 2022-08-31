@@ -20,13 +20,24 @@
                     <a href="{{ route(config('administrable.guard') . '.dashboard') }}"><i class="ik ik-bar-chart-2"></i><span>Tableau de bord</span></a>
                 </div>
                 {{-- insert sidebar links here --}}
-                    <!-- question link -->
+                    <!-- refere link -->
                     <div class="nav-item">
-                        <a href="{{ route('back.question.index') }}">
-                            <i class="fa fa-folder"></i><span>Questions</span>
+                        <a href="{{ route('back.refere.index') }}">
+                            <i class="fa fa-folder"></i><span>Arbitres</span>
                         </a>
                     </div>
-                    <!-- end question link -->
+                    <!-- end refere link -->
+
+
+                    <!-- request link -->
+                    <div class="nav-item">
+                        <a href="{{ route('back.request.index') }}">
+                            <i class="fa fa-folder"></i><span>Requetes</span>
+                        </a>
+                    </div>
+                    <!-- end request link -->
+
+
 
 
 

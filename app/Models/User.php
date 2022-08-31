@@ -87,7 +87,8 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
     public $custom_form_fields = [
         // ['name' => 'notify_via_whatsapp', 'type' => 'boolean',  'label' => 'Notification par whatsapp'],
         // ['name' => 'cb_whatsapp_apikey',  'type' => 'text',     'label' => 'Clé API notification whatsapp'],
-        // ['name' => 'cb_whatsapp_number',  'type' => 'text',     'label' => 'Numéro whatsapp notification whatsapp'],
+        ['name' => 'social_reason',  'type' => 'text',     'label' => 'Raison sociale'],
+        ['name' => 'country',  'type' => 'text',     'label' => 'Pays'],
     ];
 
 
@@ -125,6 +126,23 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
     }
 
 
-
     // add relation methods below
+
+    // request relation
+    public function applicants()
+    {
+      return $this->hasMany(Request::class, 'applicant_id');
+    }
+    // end request relation
+
+
+
+    // request relation
+    public function defenders()
+    {
+      return $this->hasMany(Request::class, 'defender_id');
+    }
+    // end request relation
+
+
 }

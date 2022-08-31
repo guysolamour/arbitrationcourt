@@ -30,11 +30,48 @@
                     </a>
                 </li>
 
-                <li>
-                    <a class="sidenav-item-link" href="{{ route('front.auth.quiz.index') }}" >
-                        <i class="fa fa-user"></i>
-                        <span class="nav-text">Commencer</span>
+
+                <li class="has-sub">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#arbitrage"
+                        aria-expanded="false" aria-controls="arbitrage">
+                        <i class="mdi mdi-folder-multiple-outline"></i>
+                        <span class="nav-text">Aribitrage</span> <b class="caret"></b>
                     </a>
+                    <ul class="collapse" id="arbitrage" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ front_route('dashboard.request.create') }}">
+                                    <span class="nav-text">Initier une requete</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ front_route('dashboard.request.index') }}">
+                                    <span class="nav-text">Mes requetes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ front_route('dashboard.request.defense') }}">
+                                    <span class="nav-text">Défenses</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{ front_route('dashboard.request.refere') }}">
+                                    <span class="nav-text">Arbitres</span>
+                                </a>
+                            </li>
+                            {{-- <li>
+                                <a class="sidenav-item-link" href="#}">
+                                    <span class="nav-text">En cours</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Rejetées</span>
+                                </a>
+                            </li> --}}
+                        </div>
+                    </ul>
                 </li>
 
                 <li class="has-sub">

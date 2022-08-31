@@ -48,6 +48,19 @@ if (!function_exists('get_full_date')) {
     }
 }
 
+if (!function_exists('format_price')) {
+    /**
+     * @param string $price
+     * @param string|null $suffix
+     * @return string
+     */
+    function format_price($price, string $suffix = 'FCFA')
+    {
+        return number_format((float) $price, 0, ',', ' ') . " " . $suffix;
+    }
+}
+
+
 
 if (!function_exists('format_date')) {
     /**
